@@ -60,6 +60,17 @@ var TodoList = /*#__PURE__*/function (_List) {
     value: function mostraUsuario() {
       console.log(this.user);
     }
+  }], [{
+    key: "boasVindas",
+    value: function boasVindas() {
+      console.log("Bem vindo ".concat(this.user));
+    } // metodo statico, não tem acesso aos atributos da classe
+
+  }, {
+    key: "sum",
+    value: function sum(a, b) {
+      console.log(a + b);
+    }
   }]);
 
   return TodoList;
@@ -70,4 +81,5 @@ var MinhasList = new TodoList();
 document.getElementById("novotodo").onclick = function () {
   MinhasList.add("Novo todo");
   MinhasList.mostraUsuario();
+  TodoList.sum(5, 4);
 };

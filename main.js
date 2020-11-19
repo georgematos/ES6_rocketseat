@@ -18,6 +18,15 @@ class TodoList extends List {
   mostraUsuario() {
     console.log(this.user)
   }
+
+  static boasVindas() {
+    console.log(`Bem vindo ${this.user}`)
+  }
+
+  // metodo statico, não tem acesso aos atributos da classe
+  static sum(a, b) {
+    console.log(a + b)
+  }
 }
 
 const MinhasList = new TodoList();
@@ -25,4 +34,5 @@ const MinhasList = new TodoList();
 document.getElementById("novotodo").onclick = function () {
   MinhasList.add("Novo todo")
   MinhasList.mostraUsuario()
+  TodoList.sum(5, 4)
 }
