@@ -35,4 +35,4 @@ document.getElementById("novotodo").onclick = function () {
   MinhasList.add("Novo todo")
   MinhasList.mostraUsuario()
   TodoList.sum(5, 4)
-}
+} 
